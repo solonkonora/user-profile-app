@@ -1,16 +1,25 @@
-// import React from 'react';
-// import styles from './details.module.css'
+// eslint-disable-next-line no-unused-vars
+import React from "react";
+import styles from './details.module.css';
 
-// const ProfileDetailsPage = ({ profile }) => {
-//   return (
-//     <div>
-//       <h1>Profile Details</h1>
-//       <p>First Name: {profile.firstName}</p>
-//       <p>Last Name: {profile.lastName}</p>
-//       <p>Email: {profile.email}</p>
-//       <p>Phone Number: {profile.phoneNumber}</p>
-//     </div>
-//   );
-// };
+const DetailsPage = ({ profile }) => {
+  return (
+    <div>
+      <h1 className={styles.heading}>Profile Details</h1>
+      <p>
+        <span className={styles.label}>First Name:</span> {profile.firstName}
+      </p>
+      <p>
+        <span className={styles.label}>Last Name:</span> {profile.lastName}
+      </p>
+      <p>
+        <span className={styles.label}>Email:</span> {profile.email}
+      </p>
+      <p>
+        <span className={styles.label}>Phone Number:</span> {profile.phoneNumber}
+      </p>
+    </div>
+  );
+};
 
-// export default ProfileDetailsPage;
+export default DetailsPage;
