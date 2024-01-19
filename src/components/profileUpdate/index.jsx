@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
-import styles from './profileUpdate.module.css';
+import styles from './update.module.css';
 
 const ProfileUpdatePage = ({ profile, onUpdate }) => {
   const [firstName, setFirstName] = useState(profile.firstName);
