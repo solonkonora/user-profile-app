@@ -1,55 +1,79 @@
-// import React, { useState } from 'react';
-// // import styles from ".registration.module.css"
+import React, { useState } from 'react';
+import styles from './registration.module.css';
 
-// const RegistrationPage = ({ onRegister }) => {
-//   const [firstName, setFirstName] = useState('');
-//   const [lastName, setLastName] = useState('');
-//   const [email, setEmail] = useState('');
-//   const [phoneNumber, setPhoneNumber] = useState('');
+const RegistrationPage = () => {
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
 
-//   const handleRegister = (event) => {
-//     event.preventDefault();
-//     const profile = {
-//       firstName,
-//       lastName,
-//       email,
-//       phoneNumber,
-//     };
-//     onRegister(profile);
-//   };
+  const handleFirstNameChange = (e) => {
+    setFirstName(e.target.value);
+  };
 
-//   return (
-//     <div>
-//       <h1>Registration Page</h1>
-//       <form onSubmit={handleRegister}>
-//         <input
-//           type="text"
-//           placeholder="First Name"
-//           value={firstName}
-//           onChange={(e) => setFirstName(e.target.value)}
-//         />
-//         <input
-//           type="text"
-//           placeholder="Last Name"
-//           value={lastName}
-//           onChange={(e) => setLastName(e.target.value)}
-//         />
-//         <input
-//           type="email"
-//           placeholder="Email"
-//           value={email}
-//           onChange={(e) => setEmail(e.target.value)}
-//         />
-//         <input
-//           type="tel"
-//           placeholder="Phone Number"
-//           value={phoneNumber}
-//           onChange={(e) => setPhoneNumber(e.target.value)}
-//         />
-//         <button type="submit">Register</button>
-//       </form>
-//     </div>
-//   );
-// };
+  const handleLastNameChange = (e) => {
+    setLastName(e.target.value);
+  };
 
-// export default RegistrationPage;
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePhoneNumberChange = (e) => {
+    setPhoneNumber(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission logic here
+  };
+
+  return (
+    <div>
+      <h1 className={styles.heading}>Registration</h1>
+      <form onSubmit={handleSubmit}>
+        <div className={styles.formGroup}>
+          <label htmlFor="firstName">First Name:</label>
+          <input
+            type="text"
+            id="firstName"
+            value={firstName}
+            onChange={handleFirstNameChange}
+          />
+        </div>
+        <div className={styles.formGroup}>
+          <label htmlFor="lastName">Last Name:</label>
+          <input
+            type="text"
+            id="lastName"
+            value={lastName}
+            onChange={handleLastNameChange}
+          />
+        </div>
+        <div className={styles.formGroup}>
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            value={email}
+            onChange={handleEmailChange}
+          />
+        </div>
+        <div className={styles.formGroup}>
+          <label htmlFor="phoneNumber">Phone Number:</label>
+          <input
+            type="tel"
+            id="phoneNumber"
+            value={phoneNumber}
+            onChange={handlePhoneNumberChange}
+          />
+        </div>
+        <button type="submit" className={styles.button}>
+          Create Profile
+        </button>
+      </form>
+    </div>
+  );
+};
+
+export default RegistrationPage;
