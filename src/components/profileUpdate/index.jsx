@@ -1,56 +1,87 @@
-// import React, { useState } from 'react';
-// import styles from './update.modules.css'
+/* eslint-disable react/prop-types */
+// eslint-disable-next-line no-unused-vars
+import React, { useState } from 'react';
+import styles from './profileUpdate.module.css';
 
-// const ProfileUpdatePage = ({ profile, onUpdate }) => {
-//   const [firstName, setFirstName] = useState(profile.firstName);
-//   const [lastName, setLastName] = useState(profile.lastName);
-//   const [email, setEmail] = useState(profile.email);
-//   const [phoneNumber, setPhoneNumber] = useState(profile.phoneNumber);
+const ProfileUpdatePage = ({ profile, onUpdate }) => {
+  const [firstName, setFirstName] = useState(profile.firstName);
+  const [lastName, setLastName] = useState(profile.lastName);
+  const [email, setEmail] = useState(profile.email);
+  const [phoneNumber, setPhoneNumber] = useState(profile.phoneNumber);
 
-//   const handleUpdate = (event) => {
-//     event.preventDefault();
-//     const updatedProfile = {
-//       ...profile,
-//       firstName,
-//       lastName,
-//       email,
-//       phoneNumber,
-//     };
-//     onUpdate(updatedProfile);
-//   };
+  const handleFirstNameChange = (e) => {
+    setFirstName(e.target.value);
+  };
 
-//   return (
-//     <div>
-//       <h1>Profile Update</h1>
-//       <form onSubmit={handleUpdate}>
-//         <input
-//           type="text"
-//           placeholder="First Name"
-//           value={firstName}
-//           onChange={(e) => setFirstName(e.target.value)}
-//         />
-//         <input
-//           type="text"
-//           placeholder="Last Name"
-//           value={lastName}
-//           onChange={(e) => setLastName(e.target.value)}
-//         />
-//         <input
-//           type="email"
-//           placeholder="Email"
-//           value={email}
-//           onChange={(e) => setEmail(e.target.value)}
-//         />
-//         <input
-//           type="tel"
-//           placeholder="Phone Number"
-//           value={phoneNumber}
-//           onChange={(e) => setPhoneNumber(e.target.value)}
-//         />
-//         <button type="submit">Update</button>
-//       </form>
-//     </div>
-//   );
-// };
+  const handleLastNameChange = (e) => {
+    setLastName(e.target.value);
+  };
 
-// export default ProfileUpdatePage;
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePhoneNumberChange = (e) => {
+    setPhoneNumber(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const updatedProfile = {
+      firstName,
+      lastName,
+      email,
+      phoneNumber,
+    };
+    onUpdate(updatedProfile);
+  };
+
+  return (
+    <div>
+      <h1 className={styles.heading}>Update Profile</h1>
+      <form onSubmit={handleSubmit}>
+        <div className={styles.formGroup}>
+          <label htmlFor="firstName">First Name:</label>
+          <input
+            type="text"
+            id="firstName"
+            value={firstName}
+            onChange={handleFirstNameChange}
+          />
+        </div>
+        <div className={styles.formGroup}>
+          <label htmlFor="lastName">Last Name:</label>
+          <input
+            type="text"
+            id="lastName"
+            value={lastName}
+            onChange={handleLastNameChange}
+          />
+        </div>
+        <div className={styles.formGroup}>
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            value={email}
+            onChange={handleEmailChange}
+          />
+        </div>
+        <div className={styles.formGroup}>
+          <label htmlFor="phoneNumber">Phone Number:</label>
+          <input
+            type="tel"
+            id="phoneNumber"
+            value={phoneNumber}
+            onChange={handlePhoneNumberChange}
+          />
+        </div>
+        <button type="submit" className={styles.button}>
+          Update Profile
+        </button>
+      </form>
+    </div>
+  );
+};
+
+export default ProfileUpdatePage;
