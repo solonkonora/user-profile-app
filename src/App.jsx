@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import RegistrationPage from "./components/registration";
 import DetailsPage from "./components/details";
 import ProfileUpdatePage from "./components/profileUpdate";
-import "./App.module.css"
+import './App.module.css';
 
 const App = () => {
   const [profile, setProfile] = useState({
