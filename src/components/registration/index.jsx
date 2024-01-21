@@ -24,9 +24,25 @@ const RegistrationPage = () => {
     setPhoneNumber(e.target.value);
   };
 
+ 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
+    
+    // Store the form data in localStorage
+    const formData = {
+      firstName,
+      lastName,
+      email,
+      phoneNumber
+    };
+    
+    localStorage.setItem('formData', JSON.stringify(formData));
+
+    // Reset the form fields
+    setFirstName('');
+    setLastName('');
+    setEmail('');
+    setPhoneNumber('');
   };
 
   return (
