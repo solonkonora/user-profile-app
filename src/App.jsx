@@ -37,7 +37,7 @@ const App = () => {
         </nav>
 
         <Routes>
-          {/* this small code down here is written so as to remove the '/' displayed at the link of the page which doestnt look nice*/}
+          {/* this small code is written so as to remove the '/' displayed at the link of the page which doestnt look nice*/}
           {/* <Route
             index
             element={
