@@ -90,6 +90,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './update.module.css';
 
+// eslint-disable-next-line no-unused-vars
 const ProfileUpdatePage = ({ profile, onUpdate }) => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');

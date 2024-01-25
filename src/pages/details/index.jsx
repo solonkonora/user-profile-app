@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from 'react';
+import './details.module.css';
 
 const DetailsPage = () => {
   const [formData, setFormData] = useState(null);
@@ -18,18 +19,30 @@ const DetailsPage = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Registration Details</h1>
+    <div className="container">
+      <h1 className="heading">Registration Details</h1>
       {formData ? (
         <div>
-          <p>First Name: {formData.firstName}</p>
-          <p>Last Name: {formData.lastName}</p>
-          <p>Email: {formData.email}</p>
-          <p>Phone Number: {formData.phoneNumber}</p>
+          <p>
+            <strong>First Name:</strong> {formData.firstName}
+          </p>
+          <p>
+            <strong>Last Name:</strong> {formData.lastName}
+          </p>
+          <p>
+            <strong>Email:</strong> {formData.email}
+          </p>
+          <p>
+            <strong>Phone Number:</strong> {formData.phoneNumber}
+          </p>
         </div>
       ) : (
-        <p>No registration data available.</p>
+        <p className="no-data-message">No registration data available.</p>
       )}
+
+<button type="submit" className="button1">
+          Update Data
+        </button>
     </div>
   );
 };

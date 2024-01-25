@@ -1,11 +1,9 @@
 h1 {
   font-size: 30px;
   font-weight: bold;
-  margin-bottom: 30px;
+  margin: 30px auto;
   text-align: center;
   justify-self: center;
-  
-  margin-top: 30px;
 }
 
 form {

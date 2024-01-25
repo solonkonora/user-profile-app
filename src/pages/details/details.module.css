@@ -1,19 +1,27 @@
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 h1 {
   font-size: 24px;
-  font-weight: bold;
   margin-bottom: 20px;
-  text-align: center;
-  justify-content: center;
+  margin: 0 auto;
+  padding: 40px;
 }
 
 p {
-  font-size: 16px;
   margin-bottom: 10px;
-  text-align: center;
+  margin: 0 auto;
+  padding: 10px 40px;
 }
 
-no-data-message {
-  font-size: 16px;
+.error-message {
+  color: red;
+}
+
+.no-data-message {
   font-style: italic;
   color: gray;
 }

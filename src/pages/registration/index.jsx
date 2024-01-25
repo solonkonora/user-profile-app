@@ -1,12 +1,109 @@
 // eslint-disable-next-line no-unused-vars
+// import React, { useState } from 'react';
+// import styles from './registration.module.css';
+// import { Formik, Form, Field, ErrorMessage } from 'formik';
+
+// const RegistrationPage = () => {
+//   const [firstName, setFirstName] = useState('');
+//   const [lastName, setLastName] = useState('');
+//   const [email, setEmail] = useState('');
+//   const [phoneNumber, setPhoneNumber] = useState('');
+
+//   const handleFirstNameChange = (e) => {
+//     setFirstName(e.target.value);
+//   };
+
+//   const handleLastNameChange = (e) => {
+//     setLastName(e.target.value);
+//   };
+
+//   const handleEmailChange = (e) => {
+//     setEmail(e.target.value);
+//   };
+
+//   const handlePhoneNumberChange = (e) => {
+//     setPhoneNumber(e.target.value);
+//   };
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+
+//     // Store the form data in localStorage
+//     const formData = {
+//       firstName,
+//       lastName,
+//       email,
+//       phoneNumber
+//     };
+
+//     localStorage.setItem('formData', JSON.stringify(formData));
+
+//     // Reset the form fields
+//     setFirstName('');
+//     setLastName('');
+//     setEmail('');
+//     setPhoneNumber('');
+//   };
+
+//   return (
+//     <div>
+//       <h1 className={styles.heading}>Registration</h1>
+//       <form onSubmit={handleSubmit}>
+//         <div className={styles.formGroup}>
+//           <label htmlFor="firstName">First Name:</label>
+//           <input
+//             type="text"
+//             id="firstName"
+//             value={firstName}
+//             onChange={handleFirstNameChange}
+//           />
+//         </div>
+//         <div className={styles.formGroup}>
+//           <label htmlFor="lastName">Last Name:</label>
+//           <input
+//             type="text"
+//             id="lastName"
+//             value={lastName}
+//             onChange={handleLastNameChange}
+//           />
+//         </div>
+//         <div className={styles.formGroup}>
+//           <label htmlFor="email">Email:</label>
+//           <input
+//             type="email"
+//             id="email"
+//             value={email}
+//             onChange={handleEmailChange}
+//           />
+//         </div>
+//         <div className={styles.formGroup}>
+//           <label htmlFor="phoneNumber">Phone Number:</label>
+//           <input
+//             type="tel"
+//             id="phoneNumber"
+//             value={phoneNumber}
+//             onChange={handlePhoneNumberChange}
+//           />
+//         </div>
+//         <button type="submit" className={styles.button}>
+//           Create Profile
+//         </button>
+//       </form>
+//     </div>
+//   );
+// };
+
+// export default RegistrationPage;
+
+// eslint-disable-next-line no-unused-vars
 import React from "react";
 import { useFormik } from "formik";
 import "./registration.module.css";
 import * as Yup from "yup";
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 
-const RegistrationForm = () => {
-  const history = useHistory();
+function RegistrationForm() {
+  // const history = useHistory();
 
   const formik = useFormik({
     initialValues: {
@@ -44,7 +141,7 @@ const RegistrationForm = () => {
       formik.resetForm();
 
       // Redirect to the details page
-      history.push('/details');
+      // history.push('/details');
     },
   });
 
@@ -60,8 +157,7 @@ const RegistrationForm = () => {
             name="firstName"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            value={formik.values.firstName}
-          />
+            value={formik.values.firstName} />
           {formik.touched.firstName && formik.errors.firstName && (
             <div>{formik.errors.firstName}</div>
           )}
@@ -75,8 +171,7 @@ const RegistrationForm = () => {
             name="lastName"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            value={formik.values.lastName}
-          />
+            value={formik.values.lastName} />
           {formik.touched.lastName && formik.errors.lastName && (
             <div>{formik.errors.lastName}</div>
           )}
@@ -90,8 +185,7 @@ const RegistrationForm = () => {
             name="email"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            value={formik.values.email}
-          />
+            value={formik.values.email} />
           {formik.touched.email && formik.errors.email && (
             <div>{formik.errors.email}</div>
           )}
@@ -105,8 +199,7 @@ const RegistrationForm = () => {
             name="phoneNumber"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            value={formik.values.phoneNumber}
-          />
+            value={formik.values.phoneNumber} />
           {formik.touched.phoneNumber && formik.errors.phoneNumber && (
             <div>{formik.errors.phoneNumber}</div>
           )}
@@ -118,6 +211,8 @@ const RegistrationForm = () => {
       </form>
     </>
   );
-};
+}
 
+// eslint-disable-next-line react-refresh/only-export-components
+// export { useHistory }
 export default RegistrationForm;
