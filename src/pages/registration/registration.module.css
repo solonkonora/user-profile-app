@@ -1,49 +1,46 @@
-.heading {
+h1 {
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 30px;
   text-align: center;
+  justify-self: center;
+  
   margin-top: 30px;
 }
 
-.registrationHeading {
-  font-size: 24px;
-  color: #333;
-}
-
-.form {
+form {
   width: 60vw;
   display: flex;
   flex-direction: column;
-}
-
-.formGroup {
-  max-width: 40%;
-  margin: 16px auto;
   justify-content: center;
-  justify-items: center;
+  justify-self: center;
+  margin: 0 auto;
 }
 
 label {
   display: block;
   font-weight: bold;
   margin-left: 20px;
+  padding: 10px;
+  font-size: 20px;
+  margin-top: 10px;
 }
 
 input {
-  width: 100%;
+  width: 60%;
   padding: 8px;
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
   margin: auto;
+  /* margin-bottom: 1rem; */
 }
 
-.button {
+input[type="submit"] {
   padding: 8px 16px;
   font-size: 16px;
   background-color: #007bff;
-  color: white;
+  color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -51,4 +48,27 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
+} 
+
+ button :hover {
+  background-color: #45a049;
 }
+
+.error {
+  color: red;
+  margin-top: 0.5rem;
+}
+
+button {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 

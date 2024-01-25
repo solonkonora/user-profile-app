@@ -8,12 +8,12 @@ body {
   font-family: sans-serif;
 }
 
-button {
+/* button {
   width: fit-content;
   height: fit-content;
   cursor: pointer;
   border: none;
-}
+} */
 
 a {
   color: unset;
