@@ -11,7 +11,7 @@ export default function NavBar() {
         <nav>
           <ul>
             <li>
-              {/* due to the error "No routes matched location '/'" now making the registration page to take the space ie acting like the index page */}
+              {/* using '/' to now make the registration page to take the space ie acting like the index page */}
               <Link to="/">Registration</Link>
             </li>
             <li>

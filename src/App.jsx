@@ -8,6 +8,7 @@ import ProfileUpdatePage from "./pages/profileUpdate";
 import NavBar from "./components/nav-bar/nav-bar";
 
 const App = () => {
+  // inside the app Component, the usestate hook is used to declear a state variable called profile and its setter function, profile is an object with an initial value of empty strings
   const [profile, setProfile] = useState({
     firstName: "",
     lastName: "",
@@ -15,6 +16,7 @@ const App = () => {
     phoneNumber: "",
   });
 
+  // this func is defined to update the profile state with the updated profile data
   const handleProfileUpdate = (updatedProfile) => {
     setProfile(updatedProfile);
   };
