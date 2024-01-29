@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import RegistrationPage from "./pages/registration";
 import DetailsPage from "./pages/details";
 import ProfileUpdatePage from "./pages/profileUpdate";
-import NavBar from "./components/nav-bar/nav-bar";
+// import NavBar from "./components/nav-bar/nav-bar";
 
 const App = () => {
   // inside the app Component, the usestate hook is used to declear a state variable called profile and its setter function, profile is an object with an initial value of empty strings
@@ -24,7 +24,8 @@ const App = () => {
   return (
     <Router>
       <div>
-        <NavBar />
+        {/* this is what is calling the navbar on this page */}
+        {/* <NavBar /> */}
 
         <Routes>
 {/* rather use the page as props */}
