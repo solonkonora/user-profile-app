@@ -5,7 +5,6 @@ import "./registration.module.css";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
 
-
 function RegistrationForm() {
   const navigate = useNavigate();
 
@@ -43,7 +42,7 @@ function RegistrationForm() {
       // Reset the form fields
       formik.resetForm();
 
-      navigate('details')
+      navigate("details");
     },
   });
 
@@ -59,9 +58,12 @@ function RegistrationForm() {
             name="firstName"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            value={formik.values.firstName} />
+            value={formik.values.firstName}
+          />
           {formik.touched.firstName && formik.errors.firstName && (
-            <div>{formik.errors.firstName}</div>
+            <div style = { {color:"red"} }>
+              {formik.errors.firstName}
+            </div>
           )}
         </div>
 
@@ -73,9 +75,12 @@ function RegistrationForm() {
             name="lastName"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            value={formik.values.lastName} />
+            value={formik.values.lastName}
+          />
           {formik.touched.lastName && formik.errors.lastName && (
-            <div>{formik.errors.lastName}</div>
+            <div style = { {color:"red"} }>
+              {formik.errors.lastName}
+            </div>
           )}
         </div>
 
@@ -87,9 +92,12 @@ function RegistrationForm() {
             name="email"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            value={formik.values.email} />
+            value={formik.values.email}
+          />
           {formik.touched.email && formik.errors.email && (
-            <div>{formik.errors.email}</div>
+            <div style = { {color:"red"} }>
+              {formik.errors.email}
+            </div>
           )}
         </div>
 
@@ -101,9 +109,12 @@ function RegistrationForm() {
             name="phoneNumber"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            value={formik.values.phoneNumber} />
+            value={formik.values.phoneNumber}
+          />
           {formik.touched.phoneNumber && formik.errors.phoneNumber && (
-            <div>{formik.errors.phoneNumber}</div>
+            <div style={{ color: "red", marginTop: "0.5rem" }}>
+              {formik.errors.phoneNumber}
+            </div>
           )}
         </div>
 
