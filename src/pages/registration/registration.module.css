@@ -1,3 +1,30 @@
+input[type="file"] {
+  /* display: none; Hide the default file input */
+  justify-content: center;
+}
+
+#uploadButton {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+#uploadButton:hover {
+  background-color: #97a050;
+}
+
+#uploadButton:active {
+  background-color: #3e8e41;
+}
+
+#previewImage {
+  max-width: 300px;
+  max-height: 300px;
+  margin-top: 10px;
+}
+
 h1 {
   font-size: 30px;
   font-weight: bold;
@@ -20,8 +47,7 @@ label {
   font-weight: bold;
   margin-left: 20px;
   padding: 10px;
-  font-size: 20px;
-  margin-top: 10px;
+  font-size: 15px;
 }
 
 input {
@@ -31,7 +57,6 @@ input {
   border: 1px solid #ccc;
   border-radius: 4px;
   margin: auto;
-  /* margin-bottom: 1rem; */
 }
 
 input[type="submit"] {

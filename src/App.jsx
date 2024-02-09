@@ -1,11 +1,10 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
-import './App.module.css';
+// import './App.module.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import RegistrationPage from "./pages/registration";
 import DetailsPage from "./pages/details";
 import ProfileUpdatePage from "./pages/profileUpdate";
-// import NavBar from "./components/nav-bar/nav-bar";
 
 const App = () => {
   // inside the app Component, the usestate hook is used to declear a state variable called profile and its setter function, profile is an object with an initial value of empty strings
