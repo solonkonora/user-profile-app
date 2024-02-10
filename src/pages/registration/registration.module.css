@@ -1,36 +1,10 @@
-input[type="file"] {
-  /* display: none; Hide the default file input */
-  justify-content: center;
-}
-
-#uploadButton {
-  background-color: #4caf50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-}
-
-#uploadButton:hover {
-  background-color: #97a050;
-}
-
-#uploadButton:active {
-  background-color: #3e8e41;
-}
-
-#previewImage {
-  max-width: 300px;
-  max-height: 300px;
-  margin-top: 10px;
-}
-
 h1 {
   font-size: 30px;
   font-weight: bold;
   margin: 30px auto;
   text-align: center;
   justify-self: center;
+  padding: 25px;
 }
 
 form {
@@ -72,15 +46,6 @@ input[type="submit"] {
   justify-content: center;
   align-items: center;
 } 
-
- button :hover {
-  background-color: #45a049;
-}
-
-.error {
-  color: red;
-  margin-top: 0.5rem;
-}
 
 button {
   padding: 8px 16px;

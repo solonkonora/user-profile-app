@@ -23,9 +23,7 @@ const App = () => {
   return (
     <Router>
       <div>
-        {/* this is what is calling the navbar on this page */}
-        {/* <NavBar /> */}
-
+        
         <Routes>
 {/* rather use the page as props */}
           <Route path="/" element={<RegistrationPage />} />
