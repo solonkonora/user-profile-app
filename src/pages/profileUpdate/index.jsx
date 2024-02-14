@@ -34,7 +34,7 @@ const ProfileUpdatePage = ({ onUpdate }) => {
       localStorage.setItem('formData', JSON.stringify(values));
 
       // using '/' since registration page is serving like the welcome page
-      navigate('/');
+      navigate('/details');
     },
   });
 
