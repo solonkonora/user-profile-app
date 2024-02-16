@@ -32,7 +32,7 @@ function ImageBlob() {
           height: "25%",
           justifySelf: "center",
           margin: "0 auto",
-          backgroundColor: "#007bff",
+          backgroundColor: "#7dabdb",
         }}
       >
         <img
@@ -172,6 +172,7 @@ function RegistrationForm() {
           Create Profile
         </button>
       </form>
+      
     </>
   );
 }
