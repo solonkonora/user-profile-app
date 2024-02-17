@@ -1,6 +1,7 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
-// import styles from ".registration.module.css"
 
+// eslint-disable-next-line react/prop-types
 const RegistrationPage = ({ onRegister }) => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');

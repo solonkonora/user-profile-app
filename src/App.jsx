@@ -1,7 +1,6 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react';
-import RegistrationPage from "./components/registration"
-import ProfileDetailsPage from "./components/details"
-import ProfileUpdatePage from './components/profileUpdate'
+
 
 
 const App = () => {
