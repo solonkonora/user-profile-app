@@ -8,13 +8,6 @@ body {
   font-family: sans-serif;
 }
 
-/* button {
-  width: fit-content;
-  height: fit-content;
-  cursor: pointer;
-  border: none;
-} */
-
 a {
   color: unset;
   cursor: pointer;
