@@ -1,9 +1,9 @@
 # React Profile App
-The React Profile App is a web application that allows users to create and manage their profiles. It provides a user-friendly interface for users to input their personal informationand update their profiles as needed.
+The React Profile App is a web application that allows users to create and manage their profiles. It provides a user-friendly interface for users to input their personal information and update their profiles as needed.
 
 ## Features
-- User Registration: Users can create an account by providing their email and password.
-- Login and Authentication: Registered users can log in to access their profiles securely.
+- User Registration: Users can create an account by providing their name, email and password.
+- Login and Authentication: Registered users can access their profiles details and perform updates securely.
 - Profile Creation: Users can create their profiles by filling out relevant personal information such as name, phone number, email.
 - Profile Update: Users can update their profile information and make changes as necessary.
 - Responsive Design: The app is designed to be responsive and accessible across different devices and screen sizes.
@@ -25,27 +25,6 @@ The React Profile App is a web application that allows users to create and manag
 - localStorage: for authentication and data storage.
 - HTML5 & CSS3: Markup and styling of the web application.
 
-### Directory structure
-├── public/
-│   ├── index.html
-│   └── ...
-├── src/
-│   ├── components/
-│   │   ├── Update.js
-│   │   ├── Details.js
-│   │   └── Registration.js
-│   ├── pages/
-│   │   ├── Registration.jsx
-│   │   ├── Details.jsx
-│   │   └── Update.jsx
-│   │   
-│   ├── App.js
-│   ├── App.modules.jsx
-│   └── ...
-├── .gitignore
-├── package.json
-├── README.md
-└── ...
 ### Contact
 - If you have any questions or suggestions, feel free to reach out to the project maintainer:
 

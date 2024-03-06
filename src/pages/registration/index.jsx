@@ -4,7 +4,6 @@ import "./registration.module.css";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
-// import defaultImage from '../../assets/images/pro.jpg';
 
 
 function ImageBlob() {
