@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
-import { RegistrationContext } from "./context";
+import { RegistrationContext } from "../context";
+// import { RegistrationContext } from "./context";
 
 function Update() {
   const { formData, storeFormData } = useContext(RegistrationContext);
