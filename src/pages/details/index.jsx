@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
-import { RegistrationContext } from "./context";
+import { RegistrationContext } from "../context";
+// import { RegistrationContext } from "../context";
 
 function Details() {
   const { formData, userImage } = useContext(RegistrationContext);
