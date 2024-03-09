@@ -4,7 +4,7 @@ import RegistrationForm from "./pages/registration";
 import Details from "./pages/details";
 import Update from "./pages/profileUpdate";
 // import Update from "./Update";
-import { RegistrationProvider } from "./context";
+import { RegistrationProvider } from "./pages/context";
 
 function App() {
   return (
