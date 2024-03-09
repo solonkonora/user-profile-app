@@ -1,8 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import RegistrationForm from "./Registration";
-import Details from "./Details";
-import Update from "./Update";
+import RegistrationForm from "./pages/registration";
+import Details from "./pages/details";
+import Update from "./pages/profileUpdate";
+// import Update from "./Update";
 import { RegistrationProvider } from "./context";
 
 function App() {
