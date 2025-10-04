@@ -1,2 +1,29 @@
+.App {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: #f0f2f5;
+  min-height: 100vh;
+}
 
+.App h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #222;
+}
 
+.back-button {
+  display: block;
+  margin: 1rem auto;
+  padding: 10px 16px;
+  background: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.back-button:hover {
+  background: #5a6268;
+}
