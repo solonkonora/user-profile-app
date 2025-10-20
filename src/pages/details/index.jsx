@@ -1,12 +1,10 @@
-// eslint-disable-next-line no-unused-vars
-import React, { useEffect, useState } from 'react';
-import './details.module.css';
+import './details.css';
 import { useNavigate } from "react-router-dom";
 
 function DetailsPage() {
-  // Retrieve form data from localStorage
+  // retrieve form data from localStorage
   const formData = JSON.parse(localStorage.getItem("formData"));
-  const userImage = localStorage.getItem("userImage"); // Retrieve the stored image data
+  const userImage = localStorage.getItem("userImage");
 
   const navigate = useNavigate();
 
@@ -20,9 +18,8 @@ function DetailsPage() {
       <h1 className="heading">Registration Details</h1>
       {formData ? (
         <div className="details-container">
-          {userImage && ( // Display the stored image if available
+          {userImage && ( 
             <div className="image-container">
-              {/* <p><strong className="image-heading">Profile Image</strong></p> */}
               <img src={userImage} alt="user image" className="user-image" />
             </div>
           )}

@@ -1,32 +1,48 @@
-# React Profile App
-The React Profile App is a web application that allows users to create and manage their profiles. It provides a user-friendly interface for users to input their personal information and update their profiles as needed.
+# User Profile Manager
+Welcome to User Profile Manager, a simple yet powerful web application built with React that allows users to create, view, and edit their personal profiles. This app provides a user-friendly interface to manage essential information, such as name, email, and phone number, making it easy to keep your profile up to date.
 
 ## Features
-- User Registration: Users can create an account by providing their name, email and password.
-- Login and Authentication: Registered users can access their profiles details and perform updates securely.
-- Profile Creation: Users can create their profiles by filling out relevant personal information such as name, phone number, email.
+- User Registration: Users can create an account by providing their name, email, phone number, and profile picture.
+- Profile View: Users can view their profile details in a clean and organized layout.
 - Profile Update: Users can update their profile information and make changes as necessary.
+- Image Upload: Users can upload and update their profile picture.
 - Responsive Design: The app is designed to be responsive and accessible across different devices and screen sizes.
+- Data Persistence: Profile data is stored in browser's localStorage for persistence across sessions.
 
-### Installation
-- Clone the repository: git clone https://github.com/norasolonko/user-profile-app.git
+## Installation
+1. Clone the repository:
+```bash
+git clone https://github.com/solonkonora/user-profile-app.git
+```
 
-- Navigate to the project directory: cd user-profile-app
+2. Navigate to the project directory:
+```bash
+cd user-profile-app
+```
 
-- Install the dependencies: npm install
+3. Install the dependencies:
+```bash
+npm install
+```
 
-- Start the development server: npm start
+4. Start the development server:
+```bash
+npm run dev
+```
 
-- Open the app in your browser: http://localhost:3000
+5. Open the app in your browser at the URL shown in the terminal (typically http://localhost:5173)
 
-### Technologies Used
+## Technologies Used
 - React: JavaScript library for building user interfaces.
 - React Router: Library for handling routing in a React application.
-- localStorage: for authentication and data storage.
+- Formik: Form library for React for handling form state and validation.
+- Yup: JavaScript schema validation library for form validation.
+- Vite: Fast build tool and development server.
+- localStorage: Browser API for data storage and persistence.
 - HTML5 & CSS3: Markup and styling of the web application.
 
-### Contact
-- If you have any questions or suggestions, feel free to reach out to the project maintainer:
+## Contact
+If you have any questions or suggestions, feel free to reach out to the project maintainer:
 
-- Your Name: Nkwada Nora Solonko.
+- Name: Nkwada Nora Solonko
 - Email: nkwadanora@gmail.com
