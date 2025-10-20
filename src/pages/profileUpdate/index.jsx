@@ -15,9 +15,9 @@ const ProfileUpdatePage = () => {
     lastName: Yup.string().required('Last Name is required'),
     email: Yup.string().email('Invalid email address').required('Email is required'),
     phoneNumber: Yup.string()
-      .matches(/^[6][7][5-9]\d{6}$/, 'Invalid phone number')
+      .matches(/^6\d{8}$/, 'Phone number must start with 6 and be 9 digits')
       .required('Phone Number is required'),
-    profilePicture: Yup.mixed().nullable().required('Profile Picture is required'), // Added validation for profile picture
+    profilePicture: Yup.mixed().nullable().required('Profile Picture is required'),
   });
 
   const formik = useFormik({
