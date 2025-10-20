@@ -30,7 +30,14 @@ const ProfileUpdatePage = () => {
     },
     validationSchema,
     onSubmit: (values) => {
-      localStorage.setItem('formData', JSON.stringify(values));
+      // Store the updated form data without the profilePicture field
+      const formData = {
+        firstName: values.firstName,
+        lastName: values.lastName,
+        email: values.email,
+        phoneNumber: values.phoneNumber,
+      };
+      localStorage.setItem('formData', JSON.stringify(formData));
       localStorage.setItem('userImage', profilePic); 
 
       navigate('/details');
@@ -38,15 +45,19 @@ const ProfileUpdatePage = () => {
   });
 
   useEffect(() => {
-    // retrieve the form data from localStorage
+    // Retrieve the form data from localStorage
     const storedFormData = localStorage.getItem('formData');
 
     if (storedFormData) {
       const parsedFormData = JSON.parse(storedFormData);
 
-      // set the retrieved form data to the formik initial values
-      formik.setValues(parsedFormData);
+      // Set the retrieved form data to the formik values
+      formik.setValues({
+        ...parsedFormData,
+        profilePicture: profilePic, // Keep the current profilePic in the form
+      });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleProfilePictureChange = (event) => {
