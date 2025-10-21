@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./registration.css";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useProfile } from "../../context/ProfileContext";
 
 function ImageBlob() {
@@ -48,9 +48,10 @@ function ImageBlob() {
   );
 }
 
+
 function RegistrationForm() {
   const navigate = useNavigate();
-  const { setProfile } = useProfile();
+  const { setProfile, profile } = useProfile();
 
   const formik = useFormik({
     initialValues: {
@@ -146,6 +147,13 @@ function RegistrationForm() {
           Create Profile
         </button>
       </form>
+      <div>
+        {profile && (profile.firstName || profile.lastName || profile.email || profile.phoneNumber) && (
+          <Link to="/details" className="nav-link">
+            Go to Details
+          </Link>
+        )}
+      </div>
     </>
   );
 }

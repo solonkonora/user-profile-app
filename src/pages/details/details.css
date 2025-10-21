@@ -1,3 +1,20 @@
+.nav-link {
+  margin: auto;
+  padding: 4px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #7dabdb;
+  border: 2px solid #7dabdb;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  background-color: #7dabdb;
+  color: #fff;
+}
 h1 {
   font-size: 24px;
   margin: 0 auto;

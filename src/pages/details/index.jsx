@@ -1,5 +1,5 @@
 import './details.css';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useProfile } from "../../context/ProfileContext";
 
 function DetailsPage() {
@@ -42,10 +42,13 @@ function DetailsPage() {
       ) : (
         <p className="no-data-message">No registration data available.</p>
       )}
-      <button className="button1" onClick={handleUpdateData}>
-        Update Data
-      </button>
-    </div>
+        <button className="button1" onClick={handleUpdateData}>
+          Update Data
+        </button>
+        <Link to="/" className="nav-link">
+          Back to Registration
+        </Link>
+      </div>
   );
 }
 

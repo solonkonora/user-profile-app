@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './update.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useProfile } from '../../context/ProfileContext';
@@ -93,6 +93,15 @@ const ProfileUpdatePage = () => {
           Update Profile
         </button>
       </form>
+
+      <div className='one'>
+        <Link to="/details" className="nav-link">
+          Back to Details
+        </Link>
+        <Link to="/" className="nav-link">
+          Back to Registration
+        </Link>
+      </div>
     </div>
   );
 };

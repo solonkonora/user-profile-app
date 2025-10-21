@@ -1,3 +1,25 @@
+.nav-link {
+  margin-bottom: 10px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #7dabdb;
+  border: 2px solid #7dabdb;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  font-weight: 500;
+}
+.nav-link:hover {
+  background-color: #7dabdb;
+  color: #fff;
+}
+
+.one {
+  margin-top: 24px;
+  display: flex;
+  gap: 12px;
+}
+
 .heading {
   font-size: 30px;
   font-weight: bold;
